@@ -6,7 +6,7 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 13:53:49 by rachou            #+#    #+#             */
-/*   Updated: 2023/10/17 18:55:14 by rachou           ###   ########.fr       */
+/*   Updated: 2023/10/23 12:31:01 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 void	ft_checkform(const char *format, )
 {
-	if(*format == 'c')
+	if (*format == 'c')
 		ft_putchar();
-	if(*format == '%')
+	if (*format == '%')
 		ft_putchar();
-	if(*format == 's')
+	if (*format == 's')
 		ft_pustr();
-//if(*format == 'p')
-	if(*format == 'd' || 'i')
+//if (*format == 'p')
+	if (*format == 'd' || 'i')
 		ft_putnbr();
-	if(*format == 'u')
+	if (*format == 'u')
 		ft_putnbr_base();
-	if(*format == 'x')
+	if (*format == 'x')
 		ft_putnbr_base();
-	if(*format == 'x')
+	if (*format == 'x')
 		ft_putnbr_base();
 }
 
-void	ft_putchar_fd(char c, int fd)
+size_t	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-void	ft_putstr_fd(char *s, int fd)
+size_t	ft_putstr(char *s)
 {
 	int	i;
 
