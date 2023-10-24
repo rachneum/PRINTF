@@ -6,29 +6,34 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 13:53:49 by rachou            #+#    #+#             */
-/*   Updated: 2023/10/23 12:31:01 by rachou           ###   ########.fr       */
+/*   Updated: 2023/10/24 18:06:34 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_checkform(const char *format, )
+size_t	ft_check_form(char c, va_list ap)
 {
-	if (*format == 'c')
-		ft_putchar();
-	if (*format == '%')
-		ft_putchar();
-	if (*format == 's')
-		ft_pustr();
-//if (*format == 'p')
-	if (*format == 'd' || 'i')
-		ft_putnbr();
-	if (*format == 'u')
-		ft_putnbr_base();
-	if (*format == 'x')
-		ft_putnbr_base();
-	if (*format == 'x')
-		ft_putnbr_base();
+	int	count;
+
+	count = 0;
+	if (c == 'c')
+		count += ft_putchar(va_arg(ap, int));
+	if (c == '%')
+		count += ft_putchar('%');
+	if (c == 's')
+		count += ft_putstr(va_arg(ap, char *));
+	if (c == 'd' || c == 'i')
+		count += ft_putnbr(va_arg(ap, int));
+	if (c == 'p')
+		count += ft_putstr("0x") + ft_putnbr_base(va_arg(ap, unsigned long), "0123456789abcdef");
+	if (c == 'u')
+		count += ft_putnbr_base(va_arg(ap, unsigned int), "0123456789");
+	if (c == 'x')
+		count += ft_putnbr_base(va_arg(ap, unsigned int), "0123456789abcdef");
+	if (c == 'X')
+		count += ft_putnbr_base(va_arg(ap, unsigned int), "0123456789ABCDEF");
+	return (count);
 }
 
 size_t	ft_putchar(char c)
@@ -47,4 +52,15 @@ size_t	ft_putstr(char *s)
 		write(1, &s[i], 1);
 		i++;
 	}
+}
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	if (!str)
+		return (0);
+	while (str[i])
+		i++;
+	return (i);
 }
