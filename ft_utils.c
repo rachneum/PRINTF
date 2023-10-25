@@ -6,7 +6,7 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 19:33:52 by rachou            #+#    #+#             */
-/*   Updated: 2023/10/21 20:09:54 by rachou           ###   ########.fr       */
+/*   Updated: 2023/10/25 14:01:50 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_putnbr(long int nb)
 {
 	size_t	length;
-	
+
 	length = 0;
 	if (nb < 0);
 	{

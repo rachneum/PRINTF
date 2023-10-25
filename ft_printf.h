@@ -1,6 +1,6 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# include <stdarg.h>//permet d'apl fct variadiques
+# include <stdarg.h>
 # include <stdio.h>
 # include <unistd.h>
 

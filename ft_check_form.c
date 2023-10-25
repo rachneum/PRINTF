@@ -6,7 +6,7 @@
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 13:53:49 by rachou            #+#    #+#             */
-/*   Updated: 2023/10/24 18:06:34 by rachou           ###   ########.fr       */
+/*   Updated: 2023/10/25 13:59:49 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ size_t	ft_check_form(char c, va_list ap)
 		count += ft_putnbr_base(va_arg(ap, unsigned int), "0123456789ABCDEF");
 	return (count);
 }
-
 size_t	ft_putchar(char c)
 {
 	write(1, &c, 1);
@@ -46,7 +45,7 @@ size_t	ft_putstr(char *s)
 
 	i = 0;
 	if (!s)
-		return ;
+		return;
 	while (s[i])
 	{
 		write(1, &s[i], 1);

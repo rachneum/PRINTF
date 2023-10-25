@@ -1,16 +1,16 @@
-SRCS    =   ft_printf.c ft_check_form.c ft_printf_utils.c
+SRCS	=	ft_printf.c ft_check_form.c ft_printf_utils.c
 
-OBJS    =   ${SRCS:.c=.o}
+OBJS	=	${SRCS:.c=.o}
 
-NAME    =   libftprintf.a
+NAME	=	libftprintf.a
 
-AR    =   ar rcs
+AR		=	ar rcs
 
-CC      =   cc
+CC		=	cc
 
-RM      = rm -f
+RM		=	rm -f
 
-CFLAGS  =   -Wall -Werror -Wextra
+CFLAGS	=	-Wall -Werror -Wextra
 
 all: $(NAME)
 
