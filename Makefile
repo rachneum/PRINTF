@@ -1,4 +1,4 @@
-SRCS	=	ft_printf.c ft_check_form.c ft_printf_utils.c
+SRCS	=	ft_printf.c ft_utils.c ft_check_form.c
 
 OBJS	=	${SRCS:.c=.o}
 

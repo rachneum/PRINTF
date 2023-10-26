@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/21 19:33:52 by rachou            #+#    #+#             */
-/*   Updated: 2023/10/25 14:01:50 by rachou           ###   ########.fr       */
+/*   Created: 2023/10/26 15:32:43 by rachou            #+#    #+#             */
+/*   Updated: 2023/10/26 15:33:25 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,24 @@
 
 size_t	ft_putnbr(long int nb)
 {
-	size_t	length;
+	size_t	len;
 
-	length = 0;
-	if (nb < 0);
+	len = 0;
+	if (nb < 0)
 	{
-		length += ft_putchar('-');
+		len += ft_putchar('-');
 		nb = -nb;
 	}
 	if (nb > 9)
 	{
-		length += ft_putnbr(nb / 10);
-		length += ft_putnbr(nb % 10);
+		len += ft_putnbr(nb / 10);
+		len += ft_putnbr(nb % 10);
 	}
 	else
-		length += ft_putchar(nb + 48);
-	return (length);
+		len += ft_putchar(nb + 48);
+	return (len);
 }
+
 size_t	ft_putnbr_base(unsigned long int nb, const char *base)
 {
 	size_t	len;

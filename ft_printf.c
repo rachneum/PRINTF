@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/17 14:08:09 by rachou            #+#    #+#             */
-/*   Updated: 2023/10/25 13:59:54 by rachou           ###   ########.fr       */
+/*   Created: 2023/10/26 15:31:21 by rachou            #+#    #+#             */
+/*   Updated: 2023/10/26 15:34:25 by rachou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 
 int	ft_printf(const char *format, ...)
 {
-    va_list	ap;
-    int		count;
+	va_list	ap;
+	size_t	count;
 
-    va_start(ap, format);
+	va_start(ap, format);
 	count = 0;
-    while (*format)
-    {
-        if (*format == '%')
-            count += ft_check_form(*(format + 1), ap);
+	while (*format)
+	{
+		if (*format == '%')
+		{
+			count += ft_check_form(*(format + 1), ap);
+			++format;
+		}
 		else
 			count += ft_putchar(*format);
 		++format;

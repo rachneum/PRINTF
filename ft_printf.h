@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/26 15:32:29 by rachou            #+#    #+#             */
+/*   Updated: 2023/10/26 15:34:34 by rachou           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <stdarg.h>
-# include <stdio.h>
 # include <unistd.h>
 
 int		ft_printf(const char *format, ...);
