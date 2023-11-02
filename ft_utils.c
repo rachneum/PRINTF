@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 15:32:43 by rachou            #+#    #+#             */
-/*   Updated: 2023/11/01 18:43:50 by rachou           ###   ########.fr       */
+/*   Created: 2023/11/02 11:36:28 by raneuman          #+#    #+#             */
+/*   Updated: 2023/11/02 11:37:36 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ size_t	ft_putnbr_base(unsigned long int nb, const char *base)
 {
 	size_t	len;
 	size_t	base_len;
-	
+
 	len = 0;
 	base_len = ft_strlen(base);
 	if (nb < base_len)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_form.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rachou <rachou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 18:46:03 by rachou            #+#    #+#             */
-/*   Updated: 2023/11/01 18:46:10 by rachou           ###   ########.fr       */
+/*   Created: 2023/11/02 11:35:46 by raneuman          #+#    #+#             */
+/*   Updated: 2023/11/02 11:37:20 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ size_t	ft_check_form(char c, va_list ap)
 		count += ft_putnbr_base(va_arg(ap, unsigned int), "0123456789ABCDEF");
 	return (count);
 }
+
 size_t	ft_putchar(char c)
 {
 	return (write(1, &c, 1));
